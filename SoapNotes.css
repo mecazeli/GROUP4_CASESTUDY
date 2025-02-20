@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "Poppins", serif;
+}
+
+/* MAIN CONTAINER */
+.container {
+   display: flex;
+   height: 100vh;
+   width: 100%;
+}
+
+/* SIDEBAR */
+.sidebar {
+   width: 350px;
+   background-color: #074799;
+   color: white;
+   display: flex;
+   flex-direction: column;
+   padding: 20px;
+   transition: all 0.3s ease-in-out;
+}
+
+.logo {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.logo img {
+   width: 60px;
+   height: auto;
+}
+
+.logo h2 {
+   font-size: 25px;
+   white-space: nowrap;
+   color: white;
+}
+
+.sub-menu {
+   margin-top: 70px;
+   list-style: none;
+   padding: 0;
+}
+
+.sub-menu li {
+   margin-bottom: 15px;
+   margin-left: 20px;
+}
+
+.sub-menu a {
+   text-decoration: none;
+   color: white;
+   display: flex;
+   align-items: center;
+   gap: 15px;
+   padding: 10px 15px;
+   font-size: 20px;
+   font-weight: 200;
+}
+
+.sub-menu i {
+   font-size: 25px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+   flex: 1;
+   padding: 20px;
+   background: #ffff;
+   display: flex;
+   flex-direction: column;
+}
+
+.header {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 10px 20px;
+   margin-bottom: 20px;
+   gap: 20px;
+}
+
+.search-container {
+   flex: 1;
+   max-width: 450px;
+}
+
+.search-container input {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid black;
+   border-radius: 5px;
+   font-size: 13px;
+}
+
+.profile {
+   width: 45px;
+   height: 45px;
+   background: #074799;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   font-size: 18px;
+   font-weight: 250;
+}
+
+/* Left section (Back button + RETURN) */
+.left-section {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   position: absolute;
+   left: 450px;
+   top: 40px;
+}
+
+.back {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: none;
+   border: none;
+   cursor: pointer;
+   font-size: 18px;
+   padding: 5px;
+   color: black;
+}
+
+.back:hover {
+   color: #007bff;
+}
+
+.left-section p {
+   font-size: 20px;
+   color: black;
+}
+
+/* Section*/
+section {
+   background-color: #3674B5;
+   border: 10px;
+   width: 900px;
+   height: 510px;
+   border-radius: 30px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+   position: absolute;
+   top: 50%;
+   left: 60%;
+   transform: translate(-50%, -50%);
+   padding-top: 20px;
+}
+
+/* Title */
+h2 {
+   font-size: 20px;
+   color: white;
+  padding-right:600px ;
+}
+
+/* SOAP NOTES SECTION */
+.soap-notes-container {
+   background: #337ab7;
+   padding: 20px;
+   border-radius: 30px;
+   width: 80%;
+   max-width: 900px;
+   margin: 0 auto;
+}
+
+.soap-notes-container .title {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-bottom: 10px;
+}
+
+.soap-notes-container .add-btn {
+   background: green;
+   color: white;
+   padding:10px;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.soap-notes {
+   padding: 5px;
+   border-radius: 10px;
+   max-height: 600px;
+   overflow-y: auto;
+   width: 100%; 
+   max-width: 850px; 
+ } 
+
+.note-item {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: #e6e6e6;
+   margin: 10px 0;
+   padding: 10px;
+   border-radius: 10px;
+   width: 100%; 
+   box-sizing: border-box; 
+ } 
+
+.note-item span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.note-buttons {
+  display: flex;
+  gap: 15px; 
+}
+
+
+/* BUTTONS */
+.view-btn {
+   background: #4CAF50;
+   color: white;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.edit-btn {
+   background: #FFA500;
+   color: white;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 10px;
+   cursor: pointer;
+}
+
+.delete-btn {
+   background: darkred;
+   color: white;
+   border: none;
+   padding: 5px 10px;
+   border-radius: 10px;
+   cursor: pointer;
+}
