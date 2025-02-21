@@ -24,6 +24,7 @@ CREATE TABLE Appointments (
     appointmentId INT PRIMARY KEY AUTO_INCREMENT,
     patientsId INT NOT NULL,
     appointmentDate DATE NOT NULL,
+    status ENUM('Pending','Ongoing','Completed'),
     FOREIGN KEY (patientsId) REFERENCES Patients(patientsId) ON DELETE CASCADE
 );
 
