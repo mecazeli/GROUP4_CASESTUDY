@@ -1,93 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    display:flex;
+    height:100vh;
+    width:100%;
 }
 
-.background {
-    background: #ffffff;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
+.login-info {
+    flex:1;
+    display:flex;
+    flex-direction:column; 
+    padding:20px;
 }
 
-.blue-background {
-    background: #074799;
-    width: 50vw;
-    height: 100vh;
-    position: absolute;
-    right: 0;
-    top: 0;
+.logo{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:10px;
+    width:100%;
+ }
+ 
+ .logo img {
+   width:60px;
+   height:auto;
+ }
+
+ .logo h2 {
+   font-size:25px;
+   white-space:nowrap;
 }
 
-.logo {
-    position: absolute;
-    left: 15px;
-    top: 2vh;
-    width: 8vw;
-    height: 8vw;
+.intro-login {
+    margin-top:200px;
 }
 
-.clinic-name {
-    position: absolute;
-    left: 10%;
-    top: 5%;
-    color: rgba(0, 0, 0, 0.8);
-    font-size: 4vw;
-    font-weight: 700;
+ .intro-login h2{
+   position: absolute;
+   left: 18%;
+   text-align: center;
+   color: #2F85F5;
+   font-size: 30px;
+   font-weight: 700;
 }
 
-.welcome-text {
-    position: absolute;
-    left: 15%;
-    top: 25%;
-    color: #2f85f5;
-    font-size: 3vw;
-    font-weight: 700;
+.intro-login h3{
+   margin-top:80px;
+   position: absolute;
+   left: 21%;
+   color:#0F0F10;
+   font-size: 25px;
+   font-weight:250px;
 }
 
-.sign-in-text {
-    position: absolute;
-    left: 20%;
-    top: 35%;
-    color: rgba(15, 15, 16, 0.9);
-    font-size: 2.4vw;
-    font-weight: 600;
-}
 
 .username-label,
 .password-label {
     position: absolute;
-    left: 25%;
+    left:150px;
     color: #000000;
-    font-weight: 400;
-    font-size: 1.5vw;
+    font-size: 16px;
 }
 
 .username-label {
-    top: 50%;
-    left: 125px;
+    top: 40%;
 }
 
 .password-label {
-    top: 65%;
-    left:125px;
+    top: 50%;
 }
 
 .username-input,
 .password-input {
     position: absolute;
-    margin-top: 30px;
-    left: 120px;
-    width: 37vw;
-    height: 3.2vw;
+    left: 150px;
+    width: 30%;
+    height: 40px;
     background: #ffffff;
     border-radius: 5px;
     border: 2px solid #4383d5;
@@ -96,41 +88,38 @@ body {
 }
 
 .username-input {
-    top: 50%;
+    top: 43%;
 }
 
 .password-input {
-    top: 65%;
+    top: 53%;
 }
 
 .sign-in-button {
     position: absolute;
-    left: 7.7%;
-    top: 80%;
+    left: 8%;
+    top: 60%;
     background: #0d4690;
-    width: 37vw;
-    height: 4.6vw;
+    width: 30%;
+    height: 50px;
     border-radius: 5px;
     color: white;
     text-align:center;
-    line-height: 5.2vw;
-    font-size: 2.5vw;
+    font-size: 20px;
     font-weight: 500;
     cursor: pointer;
 }
 
-.clinic-image {
-    position: absolute;
-    right: 5vw;
-    top: 30%;
-    width: 35vw;
-    height: 60%;
-    object-fit: cover;
+.login-image{
+    flex:1;
+    background: #074799;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
 
-
-@media (max-width: 768px) {
-    .blue-background {
-        display: none;
-    }
+.login-picture{
+    max-width:70%;
+    height:auto;
 }
+
