@@ -83,7 +83,7 @@
         </div>
         <!-- Save button with icon -->
         <button class="save-btn">
-          💾 Save
+        <i class="fa-solid fa-floppy-disk"></i> SAVE
         </button>
       </div>
     </div>
