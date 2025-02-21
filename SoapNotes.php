@@ -7,37 +7,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>SoapNotes </title>
   <link rel="stylesheet" href="SoapNotes.css">
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      z-index: 1000;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
-      justify-content: center;
-      align-items: center;
-    }
-    .modal-content {
-      background: white;
-      padding: 20px;
-      border-radius: 8px;
-      text-align: center;
-    }
-    .modal-buttons button {
-      margin: 10px;
-      padding: 8px 16px;
-      cursor: pointer;
-    }
-  </style>
+ 
 </head>
 <body>
   <div class="container">
     <aside class="sidebar">
       <div class="logo">
-          <img src="logo.png" alt="MetroMed Clinic">
+          <img src="images/logo.png" alt="MetroMed Clinic">
           <h2>MetroMed Clinic</h2>
       </div>
       <ul class="sub-menu">
