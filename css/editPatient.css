@@ -119,14 +119,14 @@ MAIN CONTENT */
     font-weight: 250px;
 }
 
-/* Left section (Back button + RETURN) */
+
 .left-section {
     display: flex;
     align-items: center;
     gap: 10px;
-    position: absolute; /* Positioning */
-    left: 450px; /* Adjust this value as needed */
-    top: 40px; /* Adjust this value to align properly */
+    position: absolute; 
+    left: 450px; 
+    top: 40px; 
 }
 
 .back {
@@ -150,7 +150,7 @@ MAIN CONTENT */
     color: black;
 }
 
-/* Centering the section */
+
 section {
     background-color: #3674B5;
     border: 5px solid #3674B5;
@@ -166,7 +166,7 @@ section {
     transform: translate(-50%, -50%);
 }
 
-/* Content inside section */
+
 .content {
 
     width: 90%;
@@ -175,7 +175,7 @@ section {
    
 }
 
-/* Title */
+
 h1 {
 
     margin-bottom: 20px;
@@ -183,7 +183,7 @@ h1 {
     color: white;
 }
 
-/* Input Groups */
+
 .row {
     display: flex;
     gap: 20px;
@@ -195,7 +195,7 @@ h1 {
     flex: 1;
 }
 
-/* Label & Input Styling */
+
 label {
     display: block;
     font-weight: bold;
@@ -210,70 +210,75 @@ label {
     outline: none;
 }
 
-/* Gender Section Styling */
+
 .gender-box {
     flex: 1;
+    flex-direction: column;
+    min-width: 200px;
     padding: 10px;
-    background: white;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column; /* "Gender" label stays on top */
-    gap: 5px;
+    background: transparent;
 }
 
-.gender-box > label {
+.gender-box  label {
     font-weight: bold;
+    margin-bottom:5px;
 }
 
-/* Gender options */
-.gender-options {
+
+.gender-box select{
     display: flex;
-    flex-direction: column; /* Male and Female on separate lines */
-    gap: 2px; /* Reduce spacing */
+    flex-direction: column;
+    gap: 2px;
+    background-color: #f0f0f0; 
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 5px;
+    outline: none;
 }
 
-/* Keep radio button and label close together */
+
 .gender-options div {
     display: flex;
-    align-items: center; /* Align radio button with text */
-    gap: 2px; /* Minimal space between button and label */
+    align-items: center; 
+    gap: 2px; 
 }
 
 .gender-options input {
     margin: 0;
-    width: 16px; /* Ensure standard radio button size */
+    width: 16px; 
     height: 16px;
 }
 
 .gender-options label {
-    font-size: 16px; /* Adjust label size */
-    line-height: 1; /* Ensure text aligns properly */
-    margin: 1; /* Remove extra spacing */
+    font-size: 16px; 
+    line-height: 1; 
+    margin: 1;
     padding: 0; 
 }
 
 .save-btn {
     display: flex;
-    align-items: center; /* Aligns icon and label horizontally */
-    justify-content: center; /* Centers the button */
-    gap: 8px; /* Space between icon and text */
-    background-color: #62EB69; /* Button background color */
-    color: black; /* Text and icon color */
+    align-items: center; 
+    justify-content: center; 
+    gap: 8px;
+    background-color: #62EB69;
+    color: black; 
     padding: 10px 20px;
     border-radius: 30px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    width: fit-content; /* Makes button fit content size */
-    margin: 0 auto; /* Centers it horizontally */
+    width: fit-content; 
+    margin: 0 auto; 
 }
 
 .save-btn span {
-    font-size: 30px; /* Adjust icon size */
+    font-size: 30px; 
 }
 
 .save-btn:hover {
-    background-color: white; /* Darker shade on hover */
+    background-color: white;
 }
 
 
@@ -281,9 +286,9 @@ label {
 /* General Responsive Fixes */
 @media (max-width: 1200px) {
     .left-section {
-        left: 50%; /* Centers the section */
+        left: 50%;
         transform: translateX(-50%);
-        top: 20px; /* Adjust positioning */
+        top: 20px; 
     }
 
     section {

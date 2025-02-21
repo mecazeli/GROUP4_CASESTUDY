@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Add Patient</title>
-  <link rel="stylesheet" href="addPatient.css">
+  <link rel="stylesheet" href="css/addPatient.css">
 </head>
 <body>
   <!-- MAIN CONTAINER -->
@@ -14,7 +14,7 @@
       <!-- SIDEBAR  -->
       <aside class="sidebar">
         <div class="logo">
-            <img src="logo.png" alt="MetroMed Clinic">
+            <img src="images/logo.png" alt="MetroMed Clinic">
             <h2>MetroMed Clinic</h2>
         </div>
          <!-- LIST OF MENUS -->
@@ -73,16 +73,12 @@
                         </div>
                         <div class="gender-box">
                             <label>Gender:</label>
-                            <div class="gender-options">
-                                <div>
-                                    <input type="radio" id="male" name="gender" value="Male">
-                                    <label for="male">Male</label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="female" name="gender" value="Female">
-                                    <label for="female">Female</label>
-                                </div>
-                            </div>
+                             <select id="gender">
+                                 <option value="" disabled selected>Select Gender</option>
+                                 <option value="Male">Male</option>
+                                 <option value="Female">Female</option>
+                                 <option value="Other">Other</option>
+                             </select>
                         </div>
                         
                     </div>
