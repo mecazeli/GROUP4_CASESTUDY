@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.background {
+    background: #ffffff;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.blue-background {
+    background: #074799;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.logo {
+    position: absolute;
+    left: 15px;
+    top: 2vh;
+    width: 8vw;
+    height: 8vw;
+}
+
+.clinic-name {
+    position: absolute;
+    left: 10%;
+    top: 5%;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 4vw;
+    font-weight: 700;
+}
+
+.welcome-text {
+    position: absolute;
+    left: 15%;
+    top: 25%;
+    color: #2f85f5;
+    font-size: 3vw;
+    font-weight: 700;
+}
+
+.sign-in-text {
+    position: absolute;
+    left: 20%;
+    top: 35%;
+    color: rgba(15, 15, 16, 0.9);
+    font-size: 2.4vw;
+    font-weight: 600;
+}
+
+.username-label,
+.password-label {
+    position: absolute;
+    left: 25%;
+    color: #000000;
+    font-weight: 400;
+    font-size: 1.5vw;
+}
+
+.username-label {
+    top: 50%;
+    left: 125px;
+}
+
+.password-label {
+    top: 65%;
+    left:125px;
+}
+
+.username-input,
+.password-input {
+    position: absolute;
+    margin-top: 30px;
+    left: 120px;
+    width: 37vw;
+    height: 3.2vw;
+    background: #ffffff;
+    border-radius: 5px;
+    border: 2px solid #4383d5;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.username-input {
+    top: 50%;
+}
+
+.password-input {
+    top: 65%;
+}
+
+.sign-in-button {
+    position: absolute;
+    left: 7.7%;
+    top: 80%;
+    background: #0d4690;
+    width: 37vw;
+    height: 4.6vw;
+    border-radius: 5px;
+    color: white;
+    text-align:center;
+    line-height: 5.2vw;
+    font-size: 2.5vw;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.clinic-image {
+    position: absolute;
+    right: 5vw;
+    top: 30%;
+    width: 35vw;
+    height: 60%;
+    object-fit: cover;
+}
+
+
+@media (max-width: 768px) {
+    .blue-background {
+        display: none;
+    }
+}
