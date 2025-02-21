@@ -1,0 +1,231 @@
+.border1{
+    position: absolute;
+    top: -2px;
+    left: -27px;
+    border-style: solid;
+    height: 637px;
+    width: 420px;
+    border-color: #074799;
+    background-color: #074799;
+    border-radius: 30px;
+}
+
+.title{
+    position: absolute;
+    top: 5px;
+    left: 120px;
+    font-size: 27px;
+    color: white;
+    font-family: poppins;
+    font-weight: bolder;
+}
+
+.logo1 {
+    position: absolute;
+    top: 10px;  /* Adjust as needed */
+    left: 40px; /* Adjust as needed */
+    width: 80px;  /* Adjust the size of the container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.logo1 img {
+    width: 100%;  /* Makes the image fill the container */
+    height: auto; /* Keeps the aspect ratio */
+}
+
+.sidebar {
+    position: absolute;
+    top: 150px;
+    left: 150px;
+    display: flex;
+    flex-direction: column; /* Ensures items stack vertically */
+    gap: 15px; /* Adds spacing between items */
+}
+
+
+.sub-menu {
+    margin-top:70px;
+    list-style:none;
+    padding:0;
+ }
+ 
+ .sub-menu li{
+    padding-top: 10px;
+     margin-bottom:15px 100px;
+     margin-left: 100px;
+ }
+ 
+ .sub-menu a {
+    text-decoration:none;
+    color:white;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    padding: 15px 50px;
+ }
+ 
+ .sub-menu a  {
+    font-size:20px;
+    font-weight:200px;
+    font-family: poppins;
+ }
+ 
+ .sub-menu i {
+    font-size:25px;
+ }
+
+.border2{
+    position: absolute;
+    top: 50px;
+    left: 800px;
+    border-style: solid;
+    border-width: 2px;
+    height: 30px;
+    width: 450px;
+}
+
+.border2 p{
+    position: absolute;
+    left: 50px;
+    top: -9px;
+}
+
+.circle{
+    position: absolute;
+    top: 35px;
+    left: 1280px;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    background-color: #074799;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+}
+
+.border3{
+    position: absolute;
+    top: 120px;
+    left: 470px;
+    border-style: solid;
+    background-color: #3674B5;
+    border-color: #3674B5;
+    border-radius: 30px;
+    width: 800px;
+    height: 500px;
+}
+
+.border3 .appText{
+    font-size: 20px;
+    color: white;
+    font-family: poppins;
+    position: absolute;
+    top: 5px;
+    left: 30px;
+}
+
+.border3 .details{
+    display: flex;
+    flex-direction: row; /* Stacks items vertically */
+    align-items: flex-start; /* Aligns text to the left */
+    gap: 10px; /* Adds space between items */
+}
+
+.border3 .details p{
+    font-size: 10px;
+    font-weight: 300;
+    color: white;
+    font-family: Poppins, sans-serif;
+    margin: 0;
+    padding: 90px 30px; /* Adds slight padding */
+}
+
+.borderRow .border4{
+    position: absolute;
+    top: 240px;
+    left: 500px;
+    width: 750px;
+    height: 35px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.borderRow .border5{
+    position: absolute;
+    top: 300px;
+    left: 500px;
+    width: 750px;
+    height: 35px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.borderRow .border6{
+    position: absolute;
+    top: 360px;
+    left: 500px;
+    width: 750px;
+    height: 35px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.borderRow .border7{
+    position: absolute;
+    top: 420px;
+    left: 500px;
+    width: 750px;
+    height: 35px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.borderRow .border8{
+    position: absolute;
+    top: 480px;
+    left: 500px;
+    width: 750px;
+    height: 35px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.borderRow .border8{
+    position: absolute;
+    top: 480px;
+    left: 500px;
+    width: 750px;
+    height: 35px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+
+.borderRow .border9{
+    position: absolute;
+    top: 540px;
+    left: 500px;
+    width: 750px;
+    height: 35px;
+    border-style: solid;
+    border-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
