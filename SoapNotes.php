@@ -38,12 +38,6 @@ $result = $conn->query($sql);
 
     <main class="main-content">
       <header class="header">
-          <div class="left-section">
-              <button class="back">
-                  <span class="material-symbols-outlined">arrow_back_ios</span>
-              </button>
-              <p>RETURN</p>
-          </div>
           <div class="search-container">
               <input type="text" placeholder="Search" class="search-box">
           </div>
