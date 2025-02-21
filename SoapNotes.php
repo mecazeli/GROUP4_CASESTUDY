@@ -42,25 +42,25 @@
           <div class="note-item">
             <span>Liezel Patiente</span>
             <div class="note-buttons">
-              <button class="view-btn">👁 View</button>
-              <button class="edit-btn">✏ Edit</button>
-              <button class="delete-btn" onclick="openModal(this)">❌ Delete</button>
+              <button class="view-btn"><i class="fa-solid fa-eye"></i> View</button>
+              <button class="edit-btn"><i class="fa-solid fa-pencil"></i> Edit</button>
+              <button class="delete-btn" onclick="openModal(this)"><i class="fa-solid fa-trash"></i> Delete</button>
             </div>
           </div>
           <div class="note-item">
             <span>Almer</span>
             <div class="note-buttons">
-              <button class="view-btn">👁 View</button>
-              <button class="edit-btn">✏ Edit</button>
-              <button class="delete-btn" onclick="openModal(this)">❌ Delete</button>
+              <button class="view-btn"><i class="fa-solid fa-eye"></i> View</button>
+              <button class="edit-btn"><i class="fa-solid fa-pencil"></i> Edit</button>
+              <button class="delete-btn" onclick="openModal(this)"> <i class="fa-solid fa-trash"></i>Delete</button>
             </div>
           </div>
           <div class="note-item">
             <span>Sheena Mae</span>
             <div class="note-buttons">
-              <button class="view-btn">👁 View</button>
-              <button class="edit-btn">✏ Edit</button>
-              <button class="delete-btn" onclick="openModal(this)">❌ Delete</button>
+              <button class="view-btn"><i class="fa-solid fa-eye"></i> View</button>
+              <button class="edit-btn"><i class="fa-solid fa-pencil"></i> Edit</button>
+              <button class="delete-btn" onclick="openModal(this)"><i class="fa-solid fa-trash"></i> Delete</button>
             </div>
           </div>
         </div>
