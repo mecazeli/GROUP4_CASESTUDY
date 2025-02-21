@@ -1,231 +1,134 @@
-.border1{
-    position: absolute;
-    top: -2px;
-    left: -27px;
-    border-style: solid;
-    height: 637px;
-    width: 420px;
-    border-color: #074799;
-    background-color: #074799;
-    border-radius: 30px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family:"Poppins",serif;
 }
 
-.title{
-    position: absolute;
-    top: 5px;
-    left: 120px;
-    font-size: 27px;
-    color: white;
-    font-family: poppins;
-    font-weight: bolder;
+/* MAIN CONTAINER */
+.container {
+   display:flex;
+   height:100vh;
+   width:100%;
 }
 
-.logo1 {
-    position: absolute;
-    top: 10px;  /* Adjust as needed */
-    left: 40px; /* Adjust as needed */
-    width: 80px;  /* Adjust the size of the container */
-    height: auto; /* Maintains aspect ratio */
-}
-
-.logo1 img {
-    width: 100%;  /* Makes the image fill the container */
-    height: auto; /* Keeps the aspect ratio */
-}
-
+/* SIDEBAR */
 .sidebar {
-    position: absolute;
-    top: 150px;
-    left: 150px;
-    display: flex;
-    flex-direction: column; /* Ensures items stack vertically */
-    gap: 15px; /* Adds spacing between items */
+   width:350px;
+   background-color: #074799;
+   color:white;
+   display:flex;
+   flex-direction:column;
+   padding:20px;
+   border-radius:15px 0 0 15px;
+   transition:all 0.3s ease-in-out;
+}
+
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo img {
+   width:60px;
+   height:auto;
+}
+
+.logo h2{
+   font-size:25px;
+   white-space:nowrap;
+   color:white;
 }
 
 
 .sub-menu {
-    margin-top:70px;
-    list-style:none;
-    padding:0;
- }
- 
- .sub-menu li{
-    padding-top: 10px;
-     margin-bottom:15px 100px;
-     margin-left: 100px;
- }
- 
- .sub-menu a {
-    text-decoration:none;
-    color:white;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding: 15px 50px;
- }
- 
- .sub-menu a  {
-    font-size:20px;
-    font-weight:200px;
-    font-family: poppins;
- }
- 
- .sub-menu i {
-    font-size:25px;
- }
-
-.border2{
-    position: absolute;
-    top: 50px;
-    left: 800px;
-    border-style: solid;
-    border-width: 2px;
-    height: 30px;
-    width: 450px;
+   margin-top:70px;
+   list-style:none;
+   padding:0;
 }
 
-.border2 p{
-    position: absolute;
-    left: 50px;
-    top: -9px;
+.sub-menu li{
+    margin-bottom:15px;
+    margin-left:20px;
 }
 
-.circle{
-    position: absolute;
-    top: 35px;
-    left: 1280px;
+.sub-menu a {
+   text-decoration:none;
+   color:white;
+   display:flex;
+   align-items:center;
+   gap:15px;
+   padding:10px 15px;
 }
 
-.circle {
-    width: 60px;
-    height: 60px;
-    background-color: #074799;
-    border-radius: 50%;
+.sub-menu a  {
+   font-size:20px;
+   font-weight:200px;
+}
+
+.sub-menu i {
+   font-size:25px;
+}
+/* 
+MAIN CONTENT */
+.main-content{
+  flex:1;
+  padding:20px;
+  background:#ffff;
+  display:flex;
+  flex-direction:column;
+}
+
+.header {
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   padding: 10px 20px;
+   margin-bottom: 20px;
+   gap: 20px;
+}
+
+.search-container {
+   flex:1;
+   max-width:450px;
+}
+
+.search-container input {
+   width:100%;
+   padding:10px;
+   border:1px solid black;
+   border-radius:5px;
+   font-size:13px;
+}
+
+.profile {
+    width: 45px;
+    height: 45px;
+    background: #074799;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
-    font-family: Poppins, sans-serif;
-    font-weight: bold;
+    border-radius: 50%;
+    font-size: 18px;
+    font-weight: 250px;
 }
 
-.border3{
-    position: absolute;
-    top: 120px;
-    left: 470px;
-    border-style: solid;
-    background-color: #3674B5;
-    border-color: #3674B5;
-    border-radius: 30px;
-    width: 800px;
-    height: 500px;
+/* RESPONSIVE PART */
+@media (max-width:768px) {
+    .sidebar {
+      width:250px;
+    }
 }
 
-.border3 .appText{
-    font-size: 20px;
-    color: white;
-    font-family: poppins;
-    position: absolute;
-    top: 5px;
-    left: 30px;
-}
-
-.border3 .details{
-    display: flex;
-    flex-direction: row; /* Stacks items vertically */
-    align-items: flex-start; /* Aligns text to the left */
-    gap: 10px; /* Adds space between items */
-}
-
-.border3 .details p{
-    font-size: 10px;
-    font-weight: 300;
-    color: white;
-    font-family: Poppins, sans-serif;
-    margin: 0;
-    padding: 90px 30px; /* Adds slight padding */
-}
-
-.borderRow .border4{
-    position: absolute;
-    top: 240px;
-    left: 500px;
-    width: 750px;
-    height: 35px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-.borderRow .border5{
-    position: absolute;
-    top: 300px;
-    left: 500px;
-    width: 750px;
-    height: 35px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-.borderRow .border6{
-    position: absolute;
-    top: 360px;
-    left: 500px;
-    width: 750px;
-    height: 35px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-.borderRow .border7{
-    position: absolute;
-    top: 420px;
-    left: 500px;
-    width: 750px;
-    height: 35px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-.borderRow .border8{
-    position: absolute;
-    top: 480px;
-    left: 500px;
-    width: 750px;
-    height: 35px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-.borderRow .border8{
-    position: absolute;
-    top: 480px;
-    left: 500px;
-    width: 750px;
-    height: 35px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-}
-
-.borderRow .border9{
-    position: absolute;
-    top: 540px;
-    left: 500px;
-    width: 750px;
-    height: 35px;
-    border-style: solid;
-    border-color: rgb(255, 255, 255);
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
+@media (max-width:576px) {
+   .sidebar {
+      position:fixed;
+      top:0;
+      height:100%;
+      transition: transform 0.3s ease-in-out;
+   }
 }
