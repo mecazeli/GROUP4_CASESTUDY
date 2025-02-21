@@ -8,33 +8,30 @@
 
 </head>
 <body>
-    <div class="container">
-         <div class="login-info">
-         <div class="logo">
-            <img src="images/logo.png" alt="MetroMed Clinic">
-            <h2>MetroMed Clinic</h2>
-        </div>
-         </div>
- 
-        <div class="intro-login">
-           <h2>Welcome Back</h2>
-           <h3>SIGN IN</h3>
-       </div>
-
-        
-       <form id="loginForm">
+<div class="container">
+        <div class="login-info">
+            <div class="logo">
+                <img src="images/logo.png" alt="Logo">
+                <h2>MetroMed Clinic</h2>
+            </div>
+            
+            <div class="intro-login">
+                <h2>Welcome Back!</h2>
+                <h3>SIGN IN</h3>
+            </div>
+            <form id="loginForm">
                 <label class="username-label" for="username">Username</label>
                 <input class="username-input" type="text" id="username" name="username" placeholder="Enter your username" required>
+
                 <label class="password-label" for="password">Password</label>
                 <input class="password-input" type="password" id="password" name="password" placeholder="Enter your password" required>
+
                 <button class="sign-in-button" type="submit">SIGN IN</button>
             </form>
-
-
-         <div class="login-image">
-             <img src="images/clinic.png" class="login-picture">
-         </div>
- 
+        </div>
+        <div class="login-image">
+            <img class="login-picture" src="images/clinic.png" alt="Login Illustration">
+        </div>
     </div>
 </body>
 </html>

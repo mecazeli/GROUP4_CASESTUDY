@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .container {
-    display:flex;
-    height:100vh;
-    width:100%;
+    display: flex;
+    width: 100%;
+    height: 100vh;
 }
 
 .login-info {
@@ -17,108 +26,108 @@ body {
     padding:20px;
 }
 
-.logo{
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    gap:10px;
-    width:100%;
- }
- 
- .logo img {
-   width:60px;
-   height:auto;
- }
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
 
- .logo h2 {
-   font-size:25px;
-   white-space:nowrap;
+.logo img {
+    width: 60px;
+}
+
+.logo h2 {
+    font-size: 25px;
+    white-space:nowrap;
 }
 
 .intro-login {
     margin-top:200px;
 }
 
- .intro-login h2{
-   position: absolute;
-   left: 18%;
-   text-align: center;
-   color: #2F85F5;
-   font-size: 30px;
-   font-weight: 700;
+.intro-login h2 {
+    color: #2F85F5;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
-.intro-login h3{
-   margin-top:80px;
-   position: absolute;
-   left: 21%;
-   color:#0F0F10;
-   font-size: 25px;
-   font-weight:250px;
+.intro-login h3 {
+    color: #0F0F10;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-
-.username-label,
-.password-label {
-    position: absolute;
-    left:150px;
-    color: #000000;
-    font-size: 16px;
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
 }
 
-.username-label {
-    top: 40%;
+label {
+    font-size: 15px;
+    color: #000;
+    align-self: flex-start;
+    margin-left: 26%;
 }
 
-.password-label {
-    top: 50%;
-}
-
-.username-input,
-.password-input {
-    position: absolute;
-    left: 150px;
-    width: 30%;
-    height: 40px;
-    background: #ffffff;
-    border-radius: 5px;
-    border: 2px solid #4383d5;
+input {
+    width: 80%;
+    max-width: 400px;
+    height: 30px;
     padding: 10px;
-    box-sizing: border-box;
-}
-
-.username-input {
-    top: 43%;
-}
-
-.password-input {
-    top: 53%;
+    border: 2px solid #4383d5;
+    border-radius: 5px;
 }
 
 .sign-in-button {
-    position: absolute;
-    left: 8%;
-    top: 60%;
-    background: #0d4690;
-    width: 30%;
+    width: 80%;
+    max-width: 420px;
     height: 50px;
-    border-radius: 5px;
+    background: #0d4690;
     color: white;
-    text-align:center;
     font-size: 20px;
     font-weight: 500;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-.login-image{
-    flex:1;
+.login-image {
+    flex: 1;
     background: #074799;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.login-picture{
-    max-width:70%;
-    height:auto;
+.login-picture {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .login-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    label {
+        align-self: center;
+    }
+
+    .login-image {
+        display: none;
+    }
 }
