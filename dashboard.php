@@ -1,3 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    header("Location: login.php");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +30,7 @@
            <li><a href="#"><i class="fa-solid fa-hospital-user"></i></i>PATIENTS</a></li>
            <li><a href="#"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
            <li><a href="#"><i class="fa-solid fa-calendar-check"></i></i>APPOINTMENTS</a></li>
-           <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
+           <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
         </ul>
       </aside>
        <!-- HEADERS  AND MAIN CONTENT -->
