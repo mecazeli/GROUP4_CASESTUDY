@@ -8,14 +8,20 @@
 </head>
 <body>
     <div class="container">
-        <div class="background">
-            <div class="blue-background"></div>
-            <img class="logo" src="images/logo.png" alt="Logo">
-            <div class="clinic-name">MetroMed Clinic</div>
-            <div class="welcome-text">Welcome Back</div>
-            <div class="sign-in-text">SIGN IN</div>
+         <div class="login-info">
+         <div class="logo">
+            <img src="images/logo.png" alt="MetroMed Clinic">
+            <h2>MetroMed Clinic</h2>
+        </div>
+         </div>
+ 
+        <div class="intro-login">
+           <h2>Welcome Back</h2>
+           <h3>SIGN IN</h3>
+       </div>
 
-            <form id="loginForm">
+        
+       <form id="loginForm">
                 <label class="username-label" for="username">Username</label>
                 <input class="username-input" type="text" id="username" name="username" placeholder="Enter your username" required>
                 <label class="password-label" for="password">Password</label>
@@ -23,8 +29,11 @@
                 <button class="sign-in-button" type="submit">SIGN IN</button>
             </form>
 
-            <img class="clinic-image" src="480835788_1601618007225783_1964146754958853502_n.png" alt="Clinic Image">
-        </div>
+
+         <div class="login-image">
+             <img src="images/clinic.png" class="login-picture">
+         </div>
+ 
     </div>
 </body>
 </html>
