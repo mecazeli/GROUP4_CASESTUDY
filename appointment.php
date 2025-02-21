@@ -37,38 +37,11 @@
               <span>AD</span>
           </div>
       </header>
-       </main>
-    </div>
-
-    <script src="https://kit.fontawesome.com/b6f472161d.js" crossorigin="anonymous"></script>
-    
-    <!-- <div class="border1">
-        <div class="title">
-            <p>MetroMed Clinic</p>
-        </div>
-        <div class="logo1">
-            <img src="images/logo.png" alt="">
-        </div>
-        <ul class="sub-menu">
-            <li><a href="#"><i class="fa-solid fa-house"></i>DASHBOARD</a></li>
-            <li><a href="#"><i class="fa-solid fa-hospital-user"></i></i>PATIENTS</a></li>
-            <li><a href="#"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
-            <li><a href="#"><i class="fa-solid fa-calendar-check"></i></i>APPOINTMENTS</a></li>
-            <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
-         </ul>
-    </div>
-    
-    <div class="border2">
-        <p>Search</p>
-    </div>
-
-    <div class="circle">
-        <p>AD</p>
-    </div>
-
-    <div class="border3">
-        <p class="appText">Appointments</p>
-        <div class="details">
+          
+      <div class="appointments-container">
+    <h2>APPOINTMENTS</h2>
+    <div class="appointments-table">
+        <div class="table-header">
             <p>Id</p>
             <p>Patient Name</p>
             <p>Age</p>
@@ -76,15 +49,57 @@
             <p>Appointment Date</p>
             <p>Status</p>
         </div>
+        
+        <div class="table-row">
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <button class="edit-btn"><i class="fa-solid fa-pen"></i> Edit</button>
+        </div>
+
+        <div class="table-row">
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <button class="edit-btn"><i class="fa-solid fa-pen"></i> Edit</button>
+        </div>
+
+        <div class="table-row">
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <button class="edit-btn"><i class="fa-solid fa-pen"></i> Edit</button>
+        </div>
+        
+        <div class="table-row">
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <button class="edit-btn"><i class="fa-solid fa-pen"></i> Edit</button>
+        </div>
+
+        <div class="table-row">
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <div class="row-item"></div>
+            <button class="edit-btn"><i class="fa-solid fa-pen"></i> Edit</button>
+        </div>
+        
     </div>
-    
-    <div class="borderRow">
-        <div class="border4"></div>
-        <div class="border5"></div>
-        <div class="border6"></div>
-        <div class="border7"></div>
-        <div class="border8"></div>
-        <div class="border9"></div>
-    </div> -->
+    </div>
+       </main>
+    </div>
+    <script src="https://kit.fontawesome.com/b6f472161d.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

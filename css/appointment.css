@@ -116,6 +116,81 @@ MAIN CONTENT */
     font-size: 18px;
     font-weight: 250px;
 }
+.appointments-container {
+   width: 1000px;
+   height: 700px;
+   background-color: #3674B5;
+   border-radius: 30px;
+   padding: 20px;
+   color: white;
+   font-family: "Poppins", sans-serif;
+}
+
+.appointments-container h2 {
+   font-size: 24px;
+   font-weight: bold;
+   text-align: left;
+   margin-bottom: 20px;
+}
+
+.appointments-table {
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.table-header {
+   display: flex;
+   justify-content: space-between;
+   background-color: transparent;
+   font-weight: bold;
+   padding: 10px 25px;
+   border-bottom: 2px solid white;
+   padding-right: 300px;
+   gap: 100px;
+}
+
+.table-header p {
+   flex: 1;
+   text-align: center;
+   font-size: 13px;
+}
+
+.table-row {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   background-color: white;
+   border-radius: 10px;
+   padding: 10px 20px;
+}
+
+.row-item {
+   flex: 1;
+   height: 40px;
+   background-color: transparent;
+   border-radius: 5px;
+}
+
+.edit-btn {
+   background-color: green;
+   color: white;
+   border: none;
+   border-radius: 20px;
+   padding: 8px 15px;
+   font-size: 14px;
+   font-weight: bold;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+   cursor: pointer;
+}
+
+.edit-btn i {
+   font-size: 14px;
+}
+
 
 /* RESPONSIVE PART */
 @media (max-width:768px) {
@@ -128,7 +203,25 @@ MAIN CONTENT */
    .sidebar {
       position:fixed;
       top:0;
+      left: -1000px;
       height:100%;
       transition: transform 0.3s ease-in-out;
    }
+
+   @media (max-width:768px) {
+      .appointments-container {
+         position: absolute;
+         left: 50px;
+         width: 400px;
+      }
+
+   @media (max-width:576px) {
+      .search-container {
+         position: absolute;
+         left: -1000px  ;
+         width: 100%;
+      
+   }
+}
+  }
 }
