@@ -1,3 +1,12 @@
+<?php 
+   $host = 'localhost';
+   $username = 'root';
+   $password = 'liezel11';
+   $database = 'MetroMedClinic';
+
+   $conn = new mysqli($host,$username,$password,$database);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -61,27 +70,41 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <!-- ex. Patient -->
-                        <tr>
-                            <td>01</td>
-                            <td>Joshara</td>
-                            <td>Carasig</td>
-                            <td>08</td>
-                            <td>2025-02-20</td>
-                            <td>09123456789</td>
-                            <td>123 Cabuyao Lag.</td>
-                            <td>2025-02-20</td>
+
+                    <?php 
+                      $query = "SELECT * FROM  Patients";
+                      $result = $conn->query($query);
+
+                      if($result->num_rows> 0) {
+                        while ($row = $result->fetch_assoc()) {
+                            echo "<tr>
+                            <td>". htmlspecialchars($row['patientsId']) ."</td>
+                            <td>". htmlspecialchars($row['firstName']) . "</td>
+                            <td>" . htmlspecialchars($row['lastName']) . "</td>
+                            <td>" . htmlspecialchars($row['gender']) . "</td>
+                            <td>" . htmlspecialchars($row['dateOfBirth']) . "</td>
+                            <td>" . htmlspecialchars($row['phoneNumber']) . "</td>
+                            <td>" . htmlspecialchars($row['address']) . "</td>
+                            <td>" . htmlspecialchars($row['registrationDate']) . "</td>
                             <td>
-                                <button class="edit-btn"><i class="fa fa-edit"></i> Edit</button>
-                                <button class="delete-btn" onclick="openDeleteModal('001')"><i class="fa fa-trash"></i> Delete</button>
-                                
+                               <button class='edit-btn'><i class='fa fa-edit'></i> Edit</button>
+                               <button class='delete-btn' onclick='openDeleteModal(" . $row['patientsId'] . ")'><i class='fa fa-trash'></i> Delete</button> 
                             </td>
-                        </tr>
+                        </tr>";
+                        }
+                      }else{
+                        echo "<tr><td colspan='9'>No records found</td></tr>";
+                      }
+                      $conn->close();
+                  ?>
                     </tbody>
                 </table>
-            
-                <!-- button for add -->
-                <button class="add-btn">+ Add</button>
+                 
+                <form action="addPatient.php" method="post">
+                   <!-- button for add -->
+                   <button type="submit" class="add-btn">+ Add</button>
+                </form>
+              
             </section>
             
             <!-- modal for delete confirmation -->

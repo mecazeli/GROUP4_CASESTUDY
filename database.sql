@@ -12,11 +12,11 @@ CREATE TABLE Patients (
     patientsId INT PRIMARY KEY AUTO_INCREMENT,
     firstName VARCHAR(100) NOT NULL,
     lastName VARCHAR(100) NOT NULL,
-    gender ENUM('Male', 'Female') NOT NULL,
+    gender ENUM('Male', 'Female','Other') NOT NULL,
     dateOfBirth DATE NOT NULL,
     phoneNumber VARCHAR(15) NOT NULL,
     address VARCHAR(255) NOT NULL,
-    registrationDate DATE DEFAULT CURRENT_DATE
+    registrationDate DATE
 );
 
 -- Appointments Table
