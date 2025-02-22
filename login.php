@@ -1,42 +1,63 @@
 <?php
 session_start();
-include 'conn.php';
+include 'config.php';
 
-if (isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
 
-    // Check if user exists
-    $query = "SELECT * FROM Admin WHERE username = ?";
-    $stmt = $conn->prepare($query);
-    $stmt->bind_param("s", $username);
+    // Prepared statement to check credentials in Admin table.
+    $stmt = $conn->prepare("SELECT * FROM Admin WHERE username = ? AND password = ?");
+    $stmt->bind_param("ss", $username, $password);
     $stmt->execute();
     $result = $stmt->get_result();
-    $admin = $result->fetch_assoc();
 
-    if ($admin && $password === $admin['password']) { // Use password hashing in real projects
-        $_SESSION['admin'] = $admin['username'];
+    if ($result->num_rows === 1) {
+        $_SESSION['username'] = $username;
         header("Location: dashboard.php");
         exit();
     } else {
-        echo "<script>alert('Invalid username or password');</script>";
+        // If credentials are invalid, display an alert and reload the page.
+        echo "<script>alert('Invalid username or password.'); window.location.href='login.php';</script>";
+        exit();
     }
 }
 ?>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Admin Login</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetroMed Clinic Login</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-    <h2>Admin Login</h2>
-    <form method="POST">
-        <label>Username:</label>
-        <input type="text" name="username" required><br>
-        <label>Password:</label>
-        <input type="password" name="password" required><br>
-        <button type="submit" name="login">Login</button>
-    </form>
+    <div class="container">
+         <div class="login-info">
+             <div class="logo">
+                <img src="images/logo.png" alt="MetroMed Clinic">
+                <h2>MetroMed Clinic</h2>
+             </div>
+         </div>
+ 
+        <div class="intro-login">
+           <h2>Welcome Back</h2>
+           <h3>SIGN IN</h3>
+        </div>
+
+        <form id="loginForm" method="POST" action="login.php">
+            <label class="username-label" for="username">Username</label>
+            <input class="username-input" type="text" id="username" name="username" placeholder="Enter your username" required>
+            
+            <label class="password-label" for="password">Password</label>
+            <input class="password-input" type="password" id="password" name="password" placeholder="Enter your password" required>
+            
+            <button class="sign-in-button" type="submit">SIGN IN</button>
+        </form>
+
+         <div class="login-image">
+             <img src="images/clinic.png" class="login-picture" alt="Clinic Image">
+         </div>
+    </div>
 </body>
 </html>
