@@ -52,7 +52,7 @@ if (!$note) {
          <li><a href="#"><i class="fa-solid fa-hospital-user"></i>PATIENTS</a></li>
          <li><a href="#"><i class="fa-solid fa-book"></i>SOAP NOTES</a></li>
          <li><a href="#"><i class="fa-solid fa-calendar-check"></i>APPOINTMENTS</a></li>
-         <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
+         <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
       </ul>
     </aside>
     <!-- HEADERS AND MAIN CONTENT -->
@@ -80,10 +80,21 @@ if (!$note) {
         <!-- SOAP FORM in view mode -->
         <div class="soap-form">
           <div class="patient-id-row">
-            <label for="patient-id" class="patient-id-label">Patient:</label>
+            <!-- Patient ID (Newly Added) -->
+            <label for="patient-id" class="patient-id-label">Patient ID:</label>
             <input type="text" id="patient-id" class="patient-id-input" 
-                   value="<?= htmlspecialchars($note['firstName'] . ' ' . $note['lastName']) ?>" disabled>
+              value="<?= htmlspecialchars($note['patientsId']) ?>" disabled>
           </div>
+
+          <div class="patient-id-row">
+            <!-- Patient Name -->
+            <label for="patient-name" class="patient-id-label">Patient:</label>
+            <input type="text" id="patient-name" class="patient-id-input" 
+              value="<?= htmlspecialchars($note['firstName'] . ' ' . $note['lastName']) ?>" disabled>
+          </div>
+
+          
+
           <div class="soap-grid">
             <!-- Subjective -->
             <div class="soap-box">

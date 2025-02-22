@@ -15,8 +15,16 @@ $result = $conn->query($sql);
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Material Icons -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypA9T/TbSg9FjI6tUOvoXGV9XxfD9AFk6pGx4h9Lg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- SweetAlert2 CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+  <!-- Dashboard Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" 
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>SoapNotes</title>
   <link rel="stylesheet" href="SoapNotes.css">
 </head>
@@ -32,7 +40,7 @@ $result = $conn->query($sql);
          <li><a href="#"><i class="fa-solid fa-hospital-user"></i>PATIENTS</a></li>
          <li><a href="#"><i class="fa-solid fa-book"></i>SOAP NOTES</a></li>
          <li><a href="#"><i class="fa-solid fa-calendar-check"></i>APPOINTMENTS</a></li>
-         <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
+         <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
       </ul>
     </aside>
 
@@ -49,7 +57,7 @@ $result = $conn->query($sql);
       <section class="soap-notes-container">
         <div class="title">
           <h2>SOAP NOTES</h2>
-          <button class="add-btn">+ Add Notes</button>
+          <button class="add-btn" onclick="window.location.href='SoapNotesAdd.php'">+ Add Notes</button>
         </div>
 
         <div class="soap-notes">
@@ -74,15 +82,28 @@ $result = $conn->query($sql);
     </main>
   </div>
 
+  <!-- Include SweetAlert2 Library -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script>
     function viewNote(noteId) {
         window.location.href = "ViewSoapNotes.php?id=" + noteId;
     }
 
     function deleteNote(noteId) {
-        if (confirm("Are you sure you want to delete this note?")) {
-            window.location.href = "delete_note.php?id=" + noteId;
-        }
+      // SweetAlert2 confirmation modal
+      Swal.fire({
+          title: 'Are you sure?',
+          text: "Do you want to delete this note?",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#3085d6',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Yes, delete it!'
+      }).then((result) => {
+          if (result.isConfirmed) {
+              window.location.href = "delete_note.php?id=" + noteId;
+          }
+      });
     }
   </script>
 </body>
