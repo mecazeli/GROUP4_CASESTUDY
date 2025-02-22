@@ -47,7 +47,7 @@
           <section>
 
                 <div class="content">
-                    <h1>ADD PATIENT</h1>
+                    <h1>EDIT PATIENT</h1>
             
                     <!-- First Name & Last Name in one row -->
                     <div class="row">

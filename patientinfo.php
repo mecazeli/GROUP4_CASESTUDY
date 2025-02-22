@@ -62,6 +62,7 @@
                             <th>First Name</th>
                             <th>Last Name</th>
                             <th>Age</th>
+                            <th>Gender</th>
                             <th>Birthdate</th>
                             <th>Phone Number</th>
                             <th>Address</th>
@@ -81,6 +82,7 @@
                             <td>". htmlspecialchars($row['patientsId']) ."</td>
                             <td>". htmlspecialchars($row['firstName']) . "</td>
                             <td>" . htmlspecialchars($row['lastName']) . "</td>
+                            <td>" . htmlspecialchars($row['age']) . "</td>
                             <td>" . htmlspecialchars($row['gender']) . "</td>
                             <td>" . htmlspecialchars($row['dateOfBirth']) . "</td>
                             <td>" . htmlspecialchars($row['phoneNumber']) . "</td>
