@@ -1,20 +1,19 @@
 <?php
-session_start(); // Start session for storing messages
+session_start(); 
 
 $servername = "localhost";
-$username = "root"; // Change if needed
+$username = "root"; 
 $password = "";
-$database = "MetroMedClinic"; // Change to your database name
+$database = "MetroMedClinic"; 
 
 $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$patientId = $_GET['patientsId'] ?? ''; // Get patient ID from URL
+$patientId = $_GET['patientsId'] ?? ''; 
 $patient = [];
 
-// Fetch patient details if ID is provided
 if ($patientId) {
     $stmt = $conn->prepare("SELECT * FROM Patients WHERE patientsId = ?");
     $stmt->bind_param("i", $patientId);
