@@ -1,7 +1,7 @@
 <?php 
    $host = 'localhost';
    $username = 'root';
-   $password = '';
+   $password = 'liezel11';
    $database = 'MetroMedClinic';
 
    $conn = new mysqli($host,$username,$password,$database);
@@ -32,9 +32,9 @@
     <ul class="sub-menu">
        <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>DASHBOARD</a></li>
        <li><a href="patientinfo.php"><i class="fa-solid fa-hospital-user"></i>PATIENTS</a></li>
-       <li><a href="SoapNotesView.php"><i class="fa-solid fa-book"></i>SOAP NOTES</a></li>
+       <li><a href="SoapNotes.php"><i class="fa-solid fa-book"></i>SOAP NOTES</a></li>
        <li><a href="appointment.php"><i class="fa-solid fa-calendar-check"></i>APPOINTMENTS</a></li>
-       <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
+       <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
     </ul>
   </aside>
 

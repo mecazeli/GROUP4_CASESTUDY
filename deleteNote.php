@@ -1,6 +1,6 @@
 <?php
 // Database connection
-$conn = new mysqli("localhost", "root", "", "MetroMedClinic");
+$conn = new mysqli("localhost", "root", "liezel11", "MetroMedClinic");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }

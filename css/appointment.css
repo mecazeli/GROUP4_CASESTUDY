@@ -80,6 +80,7 @@ MAIN CONTENT */
   background:#ffff;
   display:flex;
   flex-direction:column;
+
 }
 
 .header {
@@ -116,28 +117,161 @@ MAIN CONTENT */
     font-size: 18px;
     font-weight: 250px;
 }
+
 .appointments-container {
-   width: 1000px;
-   height: 700px;
+   width: 90%;
+   max-width: 1000px;
+   background-color: #3674B5;
+   margin: 20px auto;
+   padding: 20px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+}
+
+h2 {
+   text-align: center;
+   color: #fff;
+   margin-bottom: 10px;
+}
+
+
+.appointments-table {
+   display: flex;
+   flex-direction: column;
+}
+
+.table-header,
+.table-row {
+   display: grid;
+   grid-template-columns: repeat(5, 1fr) auto;
+   padding: 5px;
+   align-items: center;
+   border-bottom: 1px solid #ddd;
+}
+
+.table-header {
+   background: #074799;
+   color: white;
+   font-weight: bold;
+   text-align: center;
+}
+
+.table-row {
+   background: #fff;
+   transition: background 0.3s;
+}
+
+.table-row:hover {
+   background: #f1f1f1;
+}
+
+.row-item {
+   text-align: center;
+}
+
+/* Buttons */
+.edit-btn {
+   background-color: #074799;
+   color: white;
+   padding: 8px 12px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background 0.3s;
+}
+
+.edit-btn:hover {
+   background: #053b7a;
+}
+
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 10;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5);
+   justify-content: center;
+   align-items: center;
+
+}
+
+.modal-content {
+   background: white;
+   padding: 20px;
+   width: 350px;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h3 {
+   margin-bottom: 15px;
+}
+
+.modal-content input,
+.modal-content select {
+   width: 100%;
+   padding: 8px;
+   margin: 10px 0;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+}
+
+/* Modal Buttons */
+.save-btn, .close-btn {
+   width: 48%;
+   padding: 10px;
+   margin-top: 10px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+}
+
+.save-btn {
+   background-color: #074799;
+   color: white;
+}
+
+.close-btn {
+   background-color: #ccc;
+   color: black;
+}
+
+/* .appointments-container {
+   width: 100%;
+   max-width: 1000px;
    background-color: #3674B5;
    border-radius: 30px;
    padding: 20px;
    color: white;
-   font-family: "Poppins", sans-serif;
+   position: absolute;
+   margin:20px auto;
+   transform: translate(-50%, -50%);
 }
 
 .appointments-container h2 {
    font-size: 24px;
    font-weight: bold;
    text-align: left;
-   margin-bottom: 20px;
+   margin-bottom: 10px;
 }
 
 .appointments-table {
-   width: 100%;
    display: flex;
    flex-direction: column;
    gap: 10px;
+}
+
+.table-header,
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr) auto;
+    padding: 10px;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
 }
 
 .table-header {
@@ -147,8 +281,6 @@ MAIN CONTENT */
    font-weight: bold;
    padding: 10px 25px;
    border-bottom: 2px solid white;
-   padding-right: 300px;
-   gap: 100px;
 }
 
 .table-header p {
@@ -171,6 +303,7 @@ MAIN CONTENT */
    height: 40px;
    background-color: transparent;
    border-radius: 5px;
+   color:black;
 }
 
 .edit-btn {
@@ -189,7 +322,7 @@ MAIN CONTENT */
 
 .edit-btn i {
    font-size: 14px;
-}
+} */
 
 
 /* RESPONSIVE PART */

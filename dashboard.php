@@ -6,25 +6,32 @@
     
        $conn = new mysqli($host,$username,$password,$database);
 
-
+       $total_patients = 0;
        $sql = "SELECT COUNT(*) AS total_patients FROM Patients";
        $result = $conn->query($sql);
-
-       $total_patients = 0; 
-
-       if ($result) {
-          $row = $result->fetch_assoc();
-          $total_patients = $row["total_patients"];
-
-          $soap_notes_query = "
-          SELECT CONCAT(p.firstName, ' ', p.lastName) AS patient_name
-          FROM Patients p
-          INNER JOIN SOAPNotes s ON p.patientsId = s.patientsId
-          GROUP BY p.patientsId
-      ";
-      $soap_notes_result = $conn->query($soap_notes_query);
-}
-
+       if ($result && $row = $result->fetch_assoc()) {
+           $total_patients = $row["total_patients"];
+       }
+       
+       // Fetch total appointments
+       $total_appointments = 0;
+       $sql = "SELECT COUNT(*) AS total_appointments FROM Appointments";
+       $result = $conn->query($sql);
+       if ($result && $row = $result->fetch_assoc()) {
+           $total_appointments = $row["total_appointments"];
+       }
+       
+       // Fetch SOAP Notes data
+       $soap_notes_query = "
+           SELECT CONCAT(p.firstName, ' ', p.lastName) AS patient_name
+           FROM Patients p
+           INNER JOIN SOAPNotes s ON p.patientsId = s.patientsId
+           GROUP BY p.patientsId
+       ";
+       $soap_notes_result = $conn->query($soap_notes_query);
+       
+       // Close connection
+       $conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -49,9 +56,9 @@
         <ul class="sub-menu">
            <li><a href="#"><i class="fa-solid fa-house"></i>DASHBOARD</a></li>
            <li><a href="patientinfo.php"><i class="fa-solid fa-hospital-user"></i></i>PATIENTS</a></li>
-           <li><a href="SoapNotesView.php"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
+           <li><a href="SoapNotes.php"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
            <li><a href="appointment.php"><i class="fa-solid fa-calendar-check"></i></i>APPOINTMENTS</a></li>
-           <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
+           <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
         </ul>
       </aside>
        <!-- HEADERS  AND MAIN CONTENT -->
@@ -102,7 +109,7 @@
                     <h4>Appointments</h4>
                 </div>
                 <div class="card-body">
-                    <h1><b>05</b></h1>
+                <h1><b><?php echo $total_appointments; ?></b></h1>
                     <p>No. of Appointments</p>
                 </div>
             </div>

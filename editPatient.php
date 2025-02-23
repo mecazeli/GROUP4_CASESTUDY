@@ -3,7 +3,7 @@ session_start();
 
 $servername = "localhost";
 $username = "root"; 
-$password = "";
+$password = "liezel11";
 $database = "MetroMedClinic"; 
 
 $conn = new mysqli($servername, $username, $password, $database);
@@ -53,8 +53,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/editPatient.css">
     <title>Edit Patient</title>
+
+ 
+       <style>
+     .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    
+}
+
+#closeModalBtn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+#closeModalBtn:hover {
+    background-color: #45a049;
+}
+    </style>
 
 </head>
 <!-- MAIN CONTAINER -->
@@ -69,21 +113,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <ul class="sub-menu">
            <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>DASHBOARD</a></li>
            <li><a href="patientinfo.php"><i class="fa-solid fa-hospital-user"></i></i>PATIENTS</a></li>
-           <li><a href="SoapNotesView.php"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
+           <li><a href="SoapNotes.php"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
            <li><a href="appointment.php"><i class="fa-solid fa-calendar-check"></i></i>APPOINTMENTS</a></li>
-           <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
+           <li><a href="logout.php"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
         </ul>
       </aside>
        <!-- HEADERS  AND MAIN CONTENT -->
        <main class="main-content">
         <header class="header">
-
-            <div class="left-section">
-                <button class="back">
-                    <span class="material-symbols-outlined"> arrow_circle_left </span>
-                </button>
-                <!-- <p> back</p> -->
-            </div>
+        <div class="left-section">
+        <form action="patientinfo.php" method="post">
+          <button type="submit" class="back">
+            <span class="material-symbols-outlined">arrow_back_ios</span>
+          </button>
+        </form>
+        <p>RETURN</p>
+      </div>
 
           <div class="search-container">
               <input type="text" placeholder="Search" class="search-box">
@@ -139,10 +184,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <input type="text" name="address" id="address" value="<?= $patient['address'] ?? '' ?>" required>
                             </div>
                         </div>
-
-                        <button type="submit" class="save-btn">
-                            <span class="material-symbols-outlined"> SAVE </span>
-                        </button>
+                        <button type="submit" name="save" class="save-btn" >
+                          <span class="material-symbols-outlined">save</span>
+                          <label>SAVE</label>
+                       </button> 
                     </form>
                 </div>
             </section>
@@ -151,34 +196,41 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <!-- Modal -->
     <div id="messageModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="modalMessage"></p>
-        </div>
+    <div class="modal-content">
+        <p id="modalMessage"></p>
+        <button id="closeModalBtn">OK</button>
     </div>
+</div>
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const modal = document.getElementById("messageModal");
-            const closeModal = document.querySelector(".close");
-            const modalMessage = document.getElementById("modalMessage");
+        const modal = document.getElementById("messageModal");
+        const closeModalBtn = document.getElementById("closeModalBtn");
+        const modalMessage = document.getElementById("modalMessage");
 
-            <?php if (isset($_SESSION['message'])): ?>
-                modalMessage.textContent = "<?= $_SESSION['message'] ?>";
-                modal.style.display = "block";
-                <?php unset($_SESSION['message']); ?>
-            <?php endif; ?>
+        <?php if (isset($_SESSION['message'])): ?>
+            modalMessage.textContent = "<?= $_SESSION['message'] ?>";
+            modal.style.display = "flex";
 
-            closeModal.addEventListener("click", function () {
-                modal.style.display = "none";
-            });
+            setTimeout(function () {
+                window.location.href = "patientinfo.php";
+            }, 2000);
 
-            window.onclick = function (event) {
-                if (event.target === modal) {
-                    modal.style.display = "none";
-                }
-            };
+            <?php unset($_SESSION['message']); ?>
+        <?php endif; ?>
+
+        closeModalBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+            window.location.href = "patientinfo.php";
         });
+
+        window.onclick = function (event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+                window.location.href = "patientinfo.php";
+            }
+        };
+    });
     </script>
 
 
