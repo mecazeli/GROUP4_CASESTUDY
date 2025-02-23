@@ -1,9 +1,30 @@
 <?php
-session_start();
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
+       $host = 'localhost';
+       $username = 'root';
+       $password = 'liezel11';
+       $database = 'MetroMedClinic';
+    
+       $conn = new mysqli($host,$username,$password,$database);
+
+
+       $sql = "SELECT COUNT(*) AS total_patients FROM Patients";
+       $result = $conn->query($sql);
+
+       $total_patients = 0; 
+
+       if ($result) {
+          $row = $result->fetch_assoc();
+          $total_patients = $row["total_patients"];
+
+          $soap_notes_query = "
+          SELECT CONCAT(p.firstName, ' ', p.lastName) AS patient_name
+          FROM Patients p
+          INNER JOIN SOAPNotes s ON p.patientsId = s.patientsId
+          GROUP BY p.patientsId
+      ";
+      $soap_notes_result = $conn->query($soap_notes_query);
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -27,9 +48,9 @@ if (!isset($_SESSION['username'])) {
          <!-- LIST OF MENUS -->
         <ul class="sub-menu">
            <li><a href="#"><i class="fa-solid fa-house"></i>DASHBOARD</a></li>
-           <li><a href="#"><i class="fa-solid fa-hospital-user"></i></i>PATIENTS</a></li>
-           <li><a href="#"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
-           <li><a href="#"><i class="fa-solid fa-calendar-check"></i></i>APPOINTMENTS</a></li>
+           <li><a href="patientinfo.php"><i class="fa-solid fa-hospital-user"></i></i>PATIENTS</a></li>
+           <li><a href="SoapNotesView.php"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
+           <li><a href="appointment.php"><i class="fa-solid fa-calendar-check"></i></i>APPOINTMENTS</a></li>
            <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
         </ul>
       </aside>
@@ -53,10 +74,12 @@ if (!isset($_SESSION['username'])) {
                     <h4>Patients</h4>
                 </div>
                 <div class="card-body">
-                    <h1><b>100</b></h1>
+                <h1><b><?php echo $total_patients; ?></b></h1>
                     <p>No. of Patients</p>
                 </div>
             </div>
+
+         
         
             <div class="card doctors">
                 <div class="card-header">
@@ -89,19 +112,18 @@ if (!isset($_SESSION['username'])) {
         <section class="bottom-section">
             <section class="soap-notes">
                 <h3>Soap Notes</h3>
-                <div class="note">
-                    <span>Liezel Patiente</span>
-                    <button class="view-btn">View</button>
-                </div>
-                <div class="note">
-                    <span>Almer Pogi</span>
-                    <button class="view-btn">View</button>
-                </div>
-                <div class="note">
-                    <span>Sheena Mae</span>
-                    <button class="view-btn">View</button>
-                </div>
-           
+                <?php
+        if ($soap_notes_result->num_rows > 0) {
+          while ($row = $soap_notes_result->fetch_assoc()) {
+            echo '<div class="note">';
+            echo '<span>' . htmlspecialchars($row["patient_name"]) . '</span>';
+            echo '<button class="view-btn">View</button>';
+            echo '</div>';
+          }
+        } else {
+          echo "<p>No SOAP Notes available.</p>";
+        }
+        ?>
         </section>
             
             <section class="calendar-container">

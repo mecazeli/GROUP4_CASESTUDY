@@ -1,27 +1,10 @@
 <?php
-session_start();
-include 'config.php';
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = trim($_POST['username']);
-    $password = trim($_POST['password']);
-
-    // Prepared statement to check credentials in Admin table.
-    $stmt = $conn->prepare("SELECT * FROM Admin WHERE username = ? AND password = ?");
-    $stmt->bind_param("ss", $username, $password);
-    $stmt->execute();
-    $result = $stmt->get_result();
-
-    if ($result->num_rows === 1) {
-        $_SESSION['username'] = $username;
-        header("Location: dashboard.php");
-        exit();
-    } else {
-        // If credentials are invalid, display an alert and reload the page.
-        echo "<script>alert('Invalid username or password.'); window.location.href='login.php';</script>";
-        exit();
-    }
-}
+       $host = 'localhost';
+       $username = 'root';
+       $password = 'liezel11';
+       $database = 'MetroMedClinic';
+    
+       $conn = new mysqli($host,$username,$password,$database);
 ?>
 
 <!DOCTYPE html>
@@ -45,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h2>Welcome Back!</h2>
                 <h3>SIGN IN</h3>
             </div>
-            <form id="loginForm">
+            <form method="POST" id="loginForm">
                 <label class="username-label" for="username">Username</label>
                 <input class="username-input" type="text" id="username" name="username" placeholder="Enter your username" required>
 
@@ -59,5 +42,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <img class="login-picture" src="images/clinic.png" alt="Login Illustration">
         </div>
     </div>
+
+    <?php 
+      if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $user = trim($_POST["username"]);
+        $pass = trim($_POST["password"]);
+    
+      
+        if (!preg_match('/^(?=.*[A-Za-z])(?=.*\d).+$/', $user) || !preg_match('/^(?=.*[A-Za-z])(?=.*\d).+$/', $pass)) {
+            echo "<script>alert('Username and Password must contain both letters and numbers.'); window.location.href='login.php';</script>";
+            exit();
+        }
+    
+      
+        $stmt = $conn->prepare("SELECT * FROM Admin WHERE username = ? AND password = ?");
+        $stmt->bind_param("ss", $user, $pass);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+
+        if ($result->num_rows > 0) {
+            $_SESSION['username'] = $user; 
+            echo '<script>
+                    alert("Login successfully!");
+                    setTimeout(function() { window.location.href = "dashboard.php"; }, 2000);
+                  </script>';;
+        } else {
+            echo "<script>alert('Invalid username or password.'); window.location.href='login.php';</script>";
+        }
+    
+        $stmt->close();
+        $conn->close();
+    }
+    ?> 
+
 </body>
 </html>

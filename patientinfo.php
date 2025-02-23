@@ -1,12 +1,10 @@
-<?php 
-   $host = 'localhost';
-   $username = 'root';
-   $password = '';
-   $database = 'MetroMedClinic';
-
-   $conn = new mysqli($host,$username,$password,$database);
-
-   
+<?php
+       $host = 'localhost';
+       $username = 'root';
+       $password = 'liezel11';
+       $database = 'MetroMedClinic';
+    
+       $conn = new mysqli($host,$username,$password,$database);
 ?>
 
 <?php
@@ -94,10 +92,10 @@ if (isset($_SESSION['success'])) {
         </div>
          <!-- LIST OF MENUS -->
         <ul class="sub-menu">
-           <li><a href="#"><i class="fa-solid fa-house"></i>DASHBOARD</a></li>
+        <li><a href="dashboard.php"><i class="fa-solid fa-house"></i>DASHBOARD</a></li>
            <li><a href="#"><i class="fa-solid fa-hospital-user"></i></i>PATIENTS</a></li>
-           <li><a href="#"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
-           <li><a href="#"><i class="fa-solid fa-calendar-check"></i></i>APPOINTMENTS</a></li>
+           <li><a href="SoapNotesView.php"><i class="fa-solid fa-book"></i></i>SOAP NOTES</a></li>
+           <li><a href="appointment.php"><i class="fa-solid fa-calendar-check"></i></i>APPOINTMENTS</a></li>
            <li><a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i>LOG OUT</a></li>
         </ul>
       </aside>
