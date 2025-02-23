@@ -9,69 +9,75 @@
 
     /* MAIN CONTAINER */
     .container {
-    display:flex;
-    height:100vh;
-    width:100%;
+        display:flex;
+        height:100vh;
+        width:100%;
     }
-
+    
     /* SIDEBAR */
     .sidebar {
-    width:350px;
-    background-color: #074799;
-    color:white;
-    display:flex;
-    flex-direction:column;
-    padding:20px;
-    border-radius:15px 0 0 15px;
-    transition:all 0.3s ease-in-out;
-    
+        width:350px;
+        background-color: #074799;
+        color: white;
+        display:flex;
+        flex-direction:column;
+        padding:20px;
+        border-radius:15px 0 0 15px;
+        transition:all 0.3s ease-in-out;
+        
     }
-
+    
     .logo{
     display:flex;
     align-items:center;
+    flex-direction: column;
     gap:10px;
     }
-
+    
     .logo img {
-    width:60px;
-    height:auto;
+        width:100px;
+        height:auto;
+        margin-left: 30x;
     }
-
+    
     .logo h2{
-    font-size:25px;
-    white-space:nowrap;
-    color:white;
+        font-size:25px;
+        margin: 10px;
+        font-size: 22px;
+        /* margin-bottom: 12px; */
+        white-space:nowrap;
+        color: white;
     }
-
-
+    
+    
     .sub-menu {
-    margin-top:70px;
-    list-style:none;
-    padding:0;
+        margin-top:70px;
+        list-style:none;
+        padding:0;
     }
-
+    
     .sub-menu li{
         margin-bottom:15px;
         margin-left:20px;
     }
-
+    
     .sub-menu a {
-    text-decoration:none;
-    color:white;
-    display:flex;
-    align-items:center;
-    gap:15px;
-    padding:10px 15px;
+        text-decoration:none;
+        color: black;
+        display:flex;
+        align-items:center;
+        gap:15px;
+        padding:10px 15px;
     }
-
+    
     .sub-menu a  {
-    font-size:20px;
-    font-weight:200px;
+        font-size: 16px;
+        /* font-weight:200px; */
+        font-weight: bold;
     }
-
+    
     .sub-menu i {
-    font-size:25px;
+        font-size:25px;
     }
     /* 
     MAIN CONTENT */
@@ -79,33 +85,34 @@
     flex:1;
     padding:20px;
     background:#ffff;
+    /* background: linear-gradient(to bottom, #60A5FA, #E5E7EB); */
     display:flex;
     flex-direction:column;
     }
-
-    .header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 20px;
-    margin-bottom: 20px;
-    gap: 20px;
-    }
-
-    .search-container {
-    flex:1;
-    max-width:450px;
     
+    .header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 10px 20px;
+        margin-bottom: 20px;
+        gap: 20px;
     }
-
+    
+    .search-container {
+        flex:1;
+        max-width:450px;
+        
+    }
+    
     .search-container input {
-    width:100%;
-    padding:10px;
-    border:1px solid black;
-    border-radius:5px;
-    font-size:13px;
+        width:100%;
+        padding:10px;
+        border:1px solid black;
+        border-radius:5px;
+        font-size:13px;
     }
-
+ 
     .profile {
         width: 45px;
         height: 45px;
@@ -117,37 +124,6 @@
         border-radius: 50%;
         font-size: 18px;
         font-weight: 250px;
-    }
-
-    /* Back- Button */
-    .left-section {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        position: relative; 
-        left:0; 
-        margin-bottom:10px;
-    }
-
-    .back {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: none;
-        border: none; 
-        cursor: pointer;
-        font-size: 18px;
-        padding: 5px;
-        color: black;
-    }
-
-    .back:hover {
-        color: #007bff; 
-    }
-
-    .left-section p {
-        font-size: 20px;
-        color: black;
     }
 
     /* Patient Info Section */
@@ -194,13 +170,14 @@
     /* Buttons */
     .edit-btn, .delete-btn {
         padding: 6px 12px;
-        border: none;
+        border: 1px solid;
         font-size: 14px;
         cursor: pointer;
         border-radius: 5px;
     }
 
     .edit-btn {
+        text-decoration: none;
         background-color: #4CAF50;
         color: white;
     }
@@ -277,6 +254,57 @@
 
     .modal-buttons .confirm-delete:hover {
         background-color: #e74c3c;
+    }
+
+    /* Success Message Modal */
+    .success-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    }
+
+    .success-modal-content {
+    background: #e3f2fd;
+    padding: 20px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid #007bff;
+    }
+
+    .success-icon {
+    font-size: 50px;
+    color: #007bff;
+    margin-bottom: 10px;
+    }
+
+    .success-modal p {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    }
+
+    .success-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    }
+
+    .success-btn:hover {
+    background-color: #0056b3;
     }
 
     /* Close Button */
