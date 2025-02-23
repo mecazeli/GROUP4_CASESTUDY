@@ -165,7 +165,7 @@ section {
 h2 {
    font-size: 20px;
    color: white;
-  padding-right:700px ;
+   padding-right:700px ;
 }
 
 /* SOAP FORM */
@@ -237,8 +237,16 @@ h2 {
    cursor: pointer;
    font-size: 15px;
    font-weight: bold;
+   margin: 20px auto;
    align-self: center;
    gap:5px;
+}
+
+.save-container {
+   display: flex;
+   justify-content: center; /* Centers horizontally */
+   margin-top: -5px; /* Adds spacing */
+   width: 100%;
 }
 
 .save-btn i {

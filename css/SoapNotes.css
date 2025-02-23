@@ -277,3 +277,86 @@ h2 {
    color: white;
    border-radius: 8px;
  }
+
+ .modal {
+   display: none; 
+   position: fixed; 
+   z-index: 1000; 
+   left: 0; 
+   top: 0; 
+   width: 100%; 
+   height: 100%; 
+   background-color: rgba(0, 0, 0, 0.4);
+ }
+ 
+ .modal-content {
+   background-color: #fff;
+   padding: 20px;
+   width: 400px;
+   margin: 10% auto;
+   border-radius: 10px;
+   text-align: center;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+ }
+
+ .modal-buttons {
+   display: flex;
+   justify-content: center;
+   margin-top: 15px;
+ }
+
+ .modal-buttons button {
+   padding: 10px 15px;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 16px;
+ }
+
+ .close-btn {
+   background-color: #555;
+   color: white;
+ }
+
+ /* MODAL CONTENT */
+ .modal-body {
+   text-align: left;
+   margin-top: 10px;
+ }
+
+ .modal-body h4 {
+   margin: 10px 0 5px;
+   font-size: 16px;
+   text-align: left;
+ }
+
+ .modal-body p {
+   background: #f4f4f4;
+   padding: 8px;
+   border-radius: 5px;
+   min-height: 40px;
+   text-align: left;
+ }
+
+ /* SEARCH BAR STYLING */
+ #searchInput {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid black;
+   border-radius: 5px;
+   font-size: 13px
+ }
+
+ /* NO RECORDS MESSAGE */
+ #noResultsMessage {
+   display: none;
+   color: white;
+   text-align: center;
+   font-size: 18px;
+   background-color: blue;
+   padding: 10px;
+   border-radius: 5px;
+   margin-top: 10px;
+ }
+ 
+ 
