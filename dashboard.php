@@ -1,10 +1,11 @@
 <?php
        $host = 'localhost';
        $username = 'root';
-       $password = 'liezel11';
+       $password = '';
        $database = 'MetroMedClinic';
+       $port = 3307;
     
-       $conn = new mysqli($host,$username,$password,$database);
+       $conn = new mysqli($host,$username,$password,$database, $port);
 
        $total_patients = 0;
        $sql = "SELECT COUNT(*) AS total_patients FROM Patients";
@@ -41,7 +42,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>MetroMed Clinic Dashboard </title>
-  <link rel="stylesheet" href="css/dashboard.css">
+  <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
   <!-- MAIN CONTAINER -->

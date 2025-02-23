@@ -60,8 +60,8 @@
             $_SESSION['username'] = $user; 
             echo '<script>
                     alert("Login successfully!");
-                    setTimeout(function() { window.location.href = "dashboard.php"; }, 2000);
                   </script>';;
+            header("Location: dashboard.php");
         } else {
             echo "<script>alert('Invalid username or password.'); window.location.href='login.php';</script>";
         }
