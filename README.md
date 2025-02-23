@@ -49,8 +49,11 @@ We are Group 5, and our project is Metro Medical Clinic, a web-based SOAP (Subje
   -(https://drive.google.com/file/d/1vx1PpYm6N4MHlTqvKBunLWKNtipf4P0t/view?usp=sharing)
 
 - **Feedback from Stakeholders:**
-  - Positive feedback: [Comments]
-  - Areas for improvement: [Comments]
+  - Positive feedback:
+  - The system is easy to navigate and efficiently displays patient records.
+  - The login process works smoothly, and the dashboard analytics are helpful for quick data review.
+  - Areas for improvement:
+  - The UI design could be improved to look more modern.
     
 ## Sprint Retrospective
 - **What went well?**
