@@ -35,6 +35,97 @@
               <span>AD</span>
           </div>
       </header>
+
+      <div class="stats">
+            <div class="card patients">
+                <div class="card-header">
+                    <div class="icon-container">
+                        <i class="fas fa-user-injured"></i>
+                    </div>
+                    <h4>Patients</h4>
+                </div>
+                <div class="card-body">
+                    <h1><b>100</b></h1>
+                    <p>No. of Patients</p>
+                </div>
+            </div>
+        
+            <div class="card doctors">
+                <div class="card-header">
+                    <div class="icon-container">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h4>Doctors</h4>
+                </div>
+                <div class="card-body">
+                    <h1><b>02</b></h1>
+                    <p>No. of Available Doctors</p>
+                </div>
+            </div>
+
+            <div class="card appointments">
+                <div class="card-header">
+                    <div class="icon-container">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h4>Appointments</h4>
+                </div>
+                <div class="card-body">
+                    <h1><b>05</b></h1>
+                    <p>No. of Appointments</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Section -->
+        <section class="bottom-section">
+            <section class="soap-notes">
+                <h3>Soap Notes</h3>
+                <div class="note">
+                    <span>Liezel Patiente</span>
+                    <button class="view-btn">View</button>
+                </div>
+                <div class="note">
+                    <span>Almer Pogi</span>
+                    <button class="view-btn">View</button>
+                </div>
+                <div class="note">
+                    <span>Sheena Mae</span>
+                    <button class="view-btn">View</button>
+                </div>
+           
+        </section>
+            
+            <section class="calendar-container">
+                    <h3>Calendar</h3>
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button id="prevMonth">&lt;</button>
+                            <span id="currentMonthYear">Month Year</span>
+                            <button id="nextMonth">&gt;</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sun</th>
+                                    <th>Mon</th>
+                                    <th>Tue</th>
+                                    <th>Wed</th>
+                                    <th>Thu</th>
+                                    <th>Fri</th>
+                                    <th>Sat</th>
+                                </tr>
+                            </thead>
+                            <tbody id="calendarBody">
+                                <!-- Calendar dates will be dynamically generated here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <script src="dashboard.js"></script>
        </main>
     </div>
 
