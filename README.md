@@ -12,7 +12,7 @@
   - Developer 8: Almer Jann Protacio [almhier]
 
  **Project Overview**
-We are Group 5, and our project is Metro Medical Clinic, a web-based SOAP (Subjective, Objective, Assessment, Plan) system designed to streamline medical documentation for healthcare professionals. This project is part of our assessment activity on Scrum Agile methodology and Git collaboration.
+ We are Group 5, and our project is Metro Medical Clinic, a web-based SOAP (Subjective, Objective, Assessment, Plan) system designed to streamline medical documentation for healthcare professionals. This project is part of our assessment activity on Scrum Agile methodology and Git collaboration.
 
 Our goal was to build a functional and user-friendly medical clinic system that allows efficient documentation of patient records, improves clinical workflow, and ensures proper data management.
   
