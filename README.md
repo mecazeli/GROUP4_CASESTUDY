@@ -10,8 +10,13 @@
   - Developer 6: Zoen Aldueza [ZAA-ZAA]
   - Developer 7: Chris Joshara Carasig [ali]
   - Developer 8: Almer Jann Protacio [almhier]
-  - 
-- ### Sprint Review
+
+ **Project Overview**
+We are Group 5, and our project is Metro Medical Clinic, a web-based SOAP (Subjective, Objective, Assessment, Plan) system designed to streamline medical documentation for healthcare professionals. This project is part of our assessment activity on Scrum Agile methodology and Git collaboration.
+
+Our goal was to build a functional and user-friendly medical clinic system that allows efficient documentation of patient records, improves clinical workflow, and ensures proper data management.
+  
+  ### Sprint Review
  - **Completed Features:**
   - Feature 1: Log In
   - a working log in that will check the following credentials of the username and password for admin if not it will prompts an invalid message and if it is correct it is prompt
@@ -30,12 +35,13 @@
   - 
 ## Sprint Retrospective
 - **What went well?**
-  - [Positive aspects of the sprint]
+  - The team collaborated effectively using Git and Scrum.
+  - Core features were successfully implemented and tested.
+  - The system met the basic requirements and functioned as expected.
 - **What could be improved?**
-  - [Challenges faced and possible solutions]
+  - UI/UX design needs enhancements to improve user experience.
 - **Action Items for Next Sprint:**
-  - [Steps to improve the next sprint]
-  -
+  - Improve UI design for better readability and user experience.
   -  ## Definition of Done
 - Code is written, reviewed, and merged.
 - Tests pass with 90%+ coverage.
