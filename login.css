@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.login-info {
+    flex:1;
+    display:flex;
+    flex-direction:column; 
+    padding:20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.logo img {
+    width: 60px;
+}
+
+.logo h2 {
+    font-size: 25px;
+    white-space:nowrap;
+}
+
+.intro-login {
+    margin-top:200px;
+}
+
+.intro-login h2 {
+    color: #2F85F5;
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro-login h3 {
+    color: #0F0F10;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+label {
+    font-size: 15px;
+    color: #000;
+    align-self: flex-start;
+    margin-left: 26%;
+}
+
+input {
+    width: 80%;
+    max-width: 400px;
+    height: 30px;
+    padding: 10px;
+    border: 2px solid #4383d5;
+    border-radius: 5px;
+}
+
+.sign-in-button {
+    width: 80%;
+    max-width: 420px;
+    height: 50px;
+    background: #0d4690;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-image {
+    flex: 1;
+    background: #074799;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-picture {
+    max-width: 70%;
+    height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .login-info {
+        align-items: center;
+        text-align: center;
+    }
+
+    label {
+        align-self: center;
+    }
+
+    .login-image {
+        display: none;
+    }
+}
