@@ -2,12 +2,44 @@
 - **Scrum Master**: Lyra Jamaica Vergara [lyra-student]  
 - **Product Owner**: Liezel T. Paciente [mecazeli]  
 - **Developers**:  
-  - Christian Placido [posa99]  
-  - Carille Zapata [Ellirac]  
-  - Ria Llamoso [eyahsummer]  
-  - Joshua Legado [joshualegado008]  
-  - Sheena Mae D. Gallo [shendetorres]  
-  - Zoen Aldueza [ZAA-ZAA]
-  - Chris Joshara Carasig [ali]
-  - Almer Jann Protacio [almhier]
+  - Developer 1:Christian Placido [posa99]  
+  - Developer 2:Carille Zapata [Ellirac]  
+  - Developer 3:Ria Llamoso [eyahsummer]  
+  - Developer 4:Joshua Legado [joshualegado008]  
+  - Developer 5:Sheena Mae D. Gallo [shendetorres]  
+  - Developer 6: Zoen Aldueza [ZAA-ZAA]
+  - Developer 7: Chris Joshara Carasig [ali]
+  - Developer 8: Almer Jann Protacio [almhier]
+  - 
+- ### Sprint Review
+ - **Completed Features:**
+  - Feature 1: Log In
+  - a working log in that will check the following credentials of the username and password for admin if not it will prompts an invalid message and if it is correct it is prompt
+  - an "Login Successful" and continues to the Dashboard Page
+  - Feature 2: Dashboard Analytics Total Patients, Total Appointments and View of the Soap Notes
+  - a working Dashboard that will sets the total patients, appointments based on the total numbers of the following on the
+  - database and the view of the added soap notes on the database
+  - Feature 3: Patients Display
+  - It display the following patients that are added on the Patients Database
+- **Demonstration:**
+  - Walkthrough Video of the System:
+  -(https://drive.google.com/file/d/1vx1PpYm6N4MHlTqvKBunLWKNtipf4P0t/view?usp=sharing)
+- **Feedback from Stakeholders:**
+  - Positive feedback: [Comments]
+  - Areas for improvement: [Comments]
+  - 
+## Sprint Retrospective
+- **What went well?**
+  - [Positive aspects of the sprint]
+- **What could be improved?**
+  - [Challenges faced and possible solutions]
+- **Action Items for Next Sprint:**
+  - [Steps to improve the next sprint]
+  -
+  -  ## Definition of Done
+- Code is written, reviewed, and merged.
+- Tests pass with 90%+ coverage.
+- Feature is documented.
+- Code is deployed successfully.
+ 
     
