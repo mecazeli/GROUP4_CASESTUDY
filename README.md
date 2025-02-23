@@ -41,7 +41,7 @@
   - UI/UX design needs enhancements to improve user experience.
 - **Action Items for Next Sprint:**
   - Improve UI design for better readability and user experience.
-  -  ## Definition of Done
+## Definition of Done
 - Code is written, reviewed, and merged.
 - Tests pass with 90%+ coverage.
 - Feature is documented.
