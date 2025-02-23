@@ -73,10 +73,10 @@ $conn->close();
                 <h2>MetroMed Clinic</h2>
             </div>
             <ul class="sub-menu">
-                <li><a href="dashboard.php"><i class="fas fa-home"></i>DASHBOARD</a></li>
-                <li><a href="patientinfo.php"><i class="fas fa-user"></i>PATIENTS</a></li>
-                <li><a href="SoapNotesView.php"><i class="fas fa-file-medical"></i>SOAP NOTES</a></li>
-                <li><a href="appointment.php"><i class="fas fa-calendar-check"></i>APPOINTMENTS</a></li>
+                <li><a href="#"><i class="fas fa-home"></i>DASHBOARD</a></li>
+                <li><a href="#"><i class="fas fa-user"></i>PATIENTS</a></li>
+                <li><a href="#"><i class="fas fa-file-medical"></i>SOAP NOTES</a></li>
+                <li><a href="#"><i class="fas fa-calendar-check"></i>APPOINTMENTS</a></li>
                 <li><a href="#"><i class="fas fa-sign-out-alt"></i>LOG OUT</a></li>
             </ul>
         </div>
