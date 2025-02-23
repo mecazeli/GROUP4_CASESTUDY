@@ -1,3 +1,29 @@
+<?php
+session_start();
+include 'config.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
+
+    // Prepared statement to check credentials in Admin table.
+    $stmt = $conn->prepare("SELECT * FROM Admin WHERE username = ? AND password = ?");
+    $stmt->bind_param("ss", $username, $password);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows === 1) {
+        $_SESSION['username'] = $username;
+        header("Location: dashboard.php");
+        exit();
+    } else {
+        // If credentials are invalid, display an alert and reload the page.
+        echo "<script>alert('Invalid username or password.'); window.location.href='login.php';</script>";
+        exit();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
