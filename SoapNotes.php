@@ -1,19 +1,20 @@
+<!-- PHP database code  -->
 <?php
 // Database connection
 $conn = new mysqli("localhost", "root", "liezel11", "MetroMedClinic");
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
 // Fetch SOAP notes with patient names
 $query = "SELECT SOAPNotes.noteId, Patients.firstName, Patients.lastName 
           FROM SOAPNotes 
           INNER JOIN Patients ON SOAPNotes.patientsId = Patients.patientsId";
 $result = $conn->query($query);
 ?>
-
+<!-- Html -->
 <!DOCTYPE html>
 <html lang="en">
+// Head
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,19 +47,21 @@ $result = $conn->query($query);
         </div>
       </header>
 
+      <!-- soapnotes title and container -->
       <section class="soap-notes-container">
         <div class="title">
           <h2>SOAP NOTES</h2>
           <button class="add-btn" onclick="addNote()">+ Add Notes</button>
         </div>
 
+        <!-- (add, create, view and delete) -->
         <div class="soap-notes" id="notesContainer">
           <?php while ($row = $result->fetch_assoc()): ?>
             <div class="note-item">
               <span class="note-name"><?php echo $row['firstName'] . ' ' . $row['lastName']; ?></span>
               <div class="note-buttons">
                 <button class="view-btn" onclick="viewPage(<?php echo $row['noteId']; ?>)">
-                    <i class="fa-solid fa-eye"></i> View
+                    <i class="fa-solid fa-eye"></i> View 
                 </button>
                 <button class="edit-btn" onclick="editNote(<?php echo $row['noteId']; ?>)">
                     <i class="fa-solid fa-pencil"></i> Edit
@@ -75,7 +78,7 @@ $result = $conn->query($query);
     </main>
   </div>
 
-  <!-- DELETE CONFIRMATION MODAL -->
+  <!-- Delete Modal -->
   <div id="deleteModal" class="modal">
       <div class="modal-content">
           <h3>Confirm Deletion</h3>
@@ -88,26 +91,26 @@ $result = $conn->query($query);
   </div>
 
   <script>
-    let deleteNoteId = null;
+    let deleteNoteId = null; // variable for deleting 
 
     function toggleModal(modalId, show) {
-        document.getElementById(modalId).style.display = show ? "block" : "none";
+        document.getElementById(modalId).style.display = show ? "block" : "none";  // toggle for modal
     }
 
     function addNote() {
-        window.location.href = "SoapNotesAdd.php";
+        window.location.href = "SoapNotesAdd.php"; // add note soap
     }
 
     function editNote(noteId) {
-        window.location.href = `SoapNotesAdd.php?noteId=${noteId}`;
+        window.location.href = `SoapNotesAdd.php?noteId=${noteId}`; // edit note soap
     }
 
     function viewPage(noteId) {
-        window.location.href = `SoapNotesView.php?noteId=${noteId}`;
+        window.location.href = `SoapNotesView.php?noteId=${noteId}`; // viewpage note soap 
     }
 
     function openDeleteModal(noteId) {
-        deleteNoteId = noteId;
+        deleteNoteId = noteId;   // delete modal
         toggleModal("deleteModal", true);
     }
 
@@ -116,7 +119,8 @@ $result = $conn->query($query);
             window.location.href = `deleteNote.php?noteId=${deleteNoteId}`;
         }
     });
-
+    
+    // for search function
     function filterNotes() {
         let input = document.getElementById("searchInput").value.toLowerCase();
         let notes = document.querySelectorAll(".note-item");
