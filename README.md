@@ -34,6 +34,12 @@ We are Group 5, and our project is Metro Medical Clinic, a web-based SOAP (Subje
   - Displays the list of **all registered patients** in the database.
   - Allows **adding, editing, and deleting** patient records.
   - Ensures data consistency and proper record-keeping.
+ 
+   - **Feature 3: Patients Management**
+  - Displays the list of **all registered soap notes based on the patients name that been stored on the patients table** in the database.
+  - Allows **adding, editing, and deleting** soap notes (Subjective, Objective, Assessment,Plan) records.
+  - Ensures data consistency and proper record-keeping.
+
 
 - **Feature 4: Appointments Management**
   - Displays **patient details** along with their scheduled appointments.
